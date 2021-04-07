@@ -1,5 +1,4 @@
 # Rendered_Image_Harmonization_Dataset
-[Wenyan Cong](https://wenyancong.com/), Junyan Cao, [Li Niu](http://bcmi.sjtu.edu.cn/home/niuli/), Jianfu Zhang
 
 Welcome to the official homepage of the rendered image harmonization dataset. **RHHarmony** is a large-scale Rendered Human Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images, which is useful for supervised image harmonization methods.
 
