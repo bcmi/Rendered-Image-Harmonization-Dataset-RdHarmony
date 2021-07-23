@@ -29,6 +29,7 @@ RHHarmony is a large-scale Rendered Human Harmonization dataset containing pairs
   
 
 ### Research Paper
+
 [Deep Image Harmonization by Bridging the Reality Gap](https://arxiv.org/pdf/2103.17104.pdf)
 
 Wenyan Cong, Junyan Cao, Li Niu, Jianfu Zhang, Xuesong Gao, Zhiwei Tang, Liqing Zhang
@@ -54,8 +55,8 @@ Wenyan Cong, Junyan Cao, Li Niu, Jianfu Zhang, Xuesong Gao, Zhiwei Tang, Liqing 
 
 
 + #### **Composite Rendered Image Generation**
-  
-   For each 2D scene, there are 10 ground-truth rendered images with 10 different styles, where one person is treated as the foreground and its foreground mask could be obtained effortlessly using Unity3D. We could generate pairs of ground-truth rendered images and composite rendered images by randomly selecting two different images and exchanging their foregrounds. The illustration of composite rendered image generation process is shown below.
+
+  For each 2D scene, there are 10 ground-truth rendered images with 10 different styles, where one person is treated as the foreground and its foreground mask could be obtained effortlessly using Unity3D. We could generate pairs of ground-truth rendered images and composite rendered images by randomly selecting two different images and exchanging their foregrounds. The illustration of composite rendered image generation process is shown below.
 
 <img src='examples/dataset_generation.jpg' align="center" width=600>
 
