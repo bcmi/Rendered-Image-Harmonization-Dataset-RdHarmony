@@ -12,9 +12,9 @@ RHHarmony is a large-scale Rendered Human Harmonization dataset containing pairs
 
 ### Highlights
 
-+ 15000 ground-truth rendered images with image resolution of 1920*1080
++ 15,000 ground-truth rendered images with image resolution of 1920*1080
 
-+ maximally 135000 pairs of ground-truth rendered images and composite rendered images
++ maximally 135,000 pairs of ground-truth rendered images and composite rendered images
 
 + accurate foreground masks
 
