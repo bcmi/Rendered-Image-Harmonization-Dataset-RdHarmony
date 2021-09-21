@@ -23,7 +23,7 @@ Wenyan Cong, Junyan Cao, Li Niu, Jianfu Zhang, Xuesong Gao, Zhiwei Tang, Liqing 
 ## Downloads
 
 - 15000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1NWXnjMUXvvRvLLmOxIvNEg) (access code: 0wr0)
-- 65000 rendered image pairs used in our paper [[Baidu_Cloud\]](https://pan.baidu.com/s/1i1rhXzbjZfiZGta6VJtJMg) (access code: 6g7n)
+- 65000 rendered image pairs used in our paper [[Baidu_Cloud\]](https://pan.baidu.com/s/1eS_XE_bTDRvdGCUg9o42RQ) (access code: vnnj)
 
 ## Details
 
