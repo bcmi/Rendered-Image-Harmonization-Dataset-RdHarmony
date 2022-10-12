@@ -18,7 +18,7 @@ Welcome to the official homepage of the rendered image harmonization dataset. **
 
 [Deep Image Harmonization by Bridging the Reality Gap](https://arxiv.org/pdf/2103.17104.pdf)
 
-Wenyan Cong, Junyan Cao, Li Niu, Jianfu Zhang, Xuesong Gao, Zhiwei Tang, Liqing Zhang
+Junyan Cao, Wenyan Cong, Li Niu, Jianfu Zhang, Liqing Zhang
 
 ## Downloads
 
