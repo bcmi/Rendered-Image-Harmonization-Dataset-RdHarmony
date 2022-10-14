@@ -1,13 +1,14 @@
 # Rendered_Image_Harmonization_Dataset
 
-Welcome to the official homepage of the rendered image harmonization dataset. **RHHarmony** is a large-scale Rendered Human Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images, which is useful for supervised image harmonization methods.
+Welcome to the official homepage of the rendered image harmonization dataset. **RdHarmony** is a large-scale Rendered Image Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images with 11 novel categories, which is useful for supervised image harmonization methods.
 
 <img src='examples/dataset_examples.jpg' align="center" width=1024>
 
 ## Highlights
 
-- 15000 ground-truth rendered images with image resolution of 1920*1080
-- maximally 135000 pairs of ground-truth rendered images and composite rendered images
+- 11 categories, containing "human", "bottle", "cake", "motorcycle", "cow", "couch", "apple", "car",  "chair", "dog" and "knife"
+- 15000 ground-truth rendered images for "human" category and 1000 ground-truth rendered images for each other, with image resolution of 1920*1080
+- maximally 225000 pairs of ground-truth rendered images and composite rendered images
 - accurate foreground masks
 - automatic rendered image generation and composite image generation
 - 30 indoor/outdoor 3D scenes
@@ -20,12 +21,24 @@ Welcome to the official homepage of the rendered image harmonization dataset. **
 
 Junyan Cao, Wenyan Cong, Li Niu, Jianfu Zhang, Liqing Zhang
 
+Note that in our paper, RdHarmony contains rendered training pairs with 6 novel categories. We extend it to 5 more novel categories.
+
 ## Downloads
+
+For "human" novel category:
 
 - 15000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1zOzLZe5BREXN26sn9NMmxg) (access code: m4de)
 - 65000 rendered image pairs used in our paper [[Baidu_Cloud\]](https://pan.baidu.com/s/1eS_XE_bTDRvdGCUg9o42RQ) (access code: vnnj)
 
+For other 10 novel categories:
+
+- 10000 ground-truth rendered images [[Baidu_Cloud\]]() (access code: )
+- 90000 rendered image pairs [[Baidu_Cloud\]]() (access code: )
+
+
 ## Details
+
+Take "human" category for an example.
 
 - ### **Ground-truth Rendered Image Generation**
 
