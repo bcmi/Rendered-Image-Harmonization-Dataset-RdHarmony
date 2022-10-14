@@ -2,7 +2,9 @@
 
 Welcome to the official homepage of the rendered image harmonization dataset. **RdHarmony** is a large-scale Rendered Image Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images with 11 novel categories, which is useful for supervised image harmonization methods.
 
+<!--
 <img src='examples/dataset_examples.jpg' align="center" width=1024>
+-->
 
 ## Highlights
 
