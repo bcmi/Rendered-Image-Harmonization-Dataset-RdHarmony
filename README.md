@@ -34,8 +34,8 @@ For "human" novel category:
 
 For other 10 novel categories ("bottle", "cake", "motorcycle", "cow", "couch", "apple", "car",  "chair", "dog" and "knife"):
 
-- 10000 ground-truth rendered images [[Baidu_Cloud\]]() (access code: )
-- 90000 rendered image pairs [[Baidu_Cloud\]]() (access code: )
+- 10000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1ZPHIVXGS7z4Xv5TuVyzumw) (access code: z7mb)
+- 90000 rendered image pairs [[Baidu_Cloud\]](https://pan.baidu.com/s/13tsKitKzblp40BLYsKMhwg) (access code: u65p)
 
 
 ## Details
