@@ -3,7 +3,7 @@
 Welcome to the official homepage of the rendered image harmonization dataset. **RdHarmony** is a large-scale Rendered Image Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images with 11 novel categories, which is useful for supervised image harmonization methods.
 
 <!--
-<img src='examples/dataset_examples.jpg' align="center" width=1024>
+<img src='examples/dataset_triplet.png' align="center" width=1024>
 -->
 
 ## Highlights
@@ -40,16 +40,17 @@ For other 10 novel categories ("bottle", "cake", "motorcycle", "cow", "couch", "
 
 ## Details
 
-Take "human" category for an example.
-
 - ### **Ground-truth Rendered Image Generation**
 
-  We collect 30 3D scenes from Unity Asset Store and CG websites, including outdoor scenes (e.g., raceway, downtown, street, forest) and indoor scenes (e.g., bar, stadium, gym). For each 2D scene shot in 3D scenes, we sample 10 ground-truth rendered images with 10 different capture conditions (i.e., styles), including the the night style as well as styles of Clear/PartlyCloudy/Cloudy weather at sunrise&sunset/noon/other-times. Example scenes with all 10 ground-truth rendered images are shown below. The left four columns are outdoor scenes (raceway, downtown, street, and forest) and the right two columns are indoor scenes (bar and stadium). Under each time of the day except “Night”, from top to bottom, we show rendered images captured under Clear, Partly Cloudy, and Cloudy weather.
+  We collect 30 3D scenes from Unity Asset Store and CG websites, including outdoor scenes (e.g., raceway, downtown, street, forest) and indoor scenes (e.g., bar, stadium, gym). For each 2D scene shot in 3D scenes, we sample 10 ground-truth rendered images with 10 different capture conditions (i.e., styles), including the the night style as well as styles of Clear/PartlyCloudy/Cloudy weather at sunrise&sunset/noon/other-times. Example scenes with all 10 ground-truth rendered images are shown below. Under each time of the day except “Night”, from top to bottom, we show rendered images captured under Clear, Partly Cloudy, and Cloudy weather.
 
 <img src='examples/groundtruth_example.jpg' align="center" width=1024>
 
+<img src='examples/dataset_examples_r5_1.png' align="center" width=1024>
+
+<img src='examples/dataset_examples_r5_2.png' align="center" width=1024>
+
 - ### **Composite Rendered Image Generation**
 
-  For each 2D scene, there are 10 ground-truth rendered images with 10 different styles, where one person is treated as the foreground and its foreground mask could be obtained effortlessly using Unity3D. We could generate pairs of ground-truth rendered images and composite rendered images by randomly selecting two different images and exchanging their foregrounds. The illustration of composite rendered image generation process is shown below.
-
+  For each 2D scene, there are 10 ground-truth rendered images with 10 different styles, where one 3D character is treated as the foreground and its foreground mask could be obtained effortlessly using Unity3D. We could generate pairs of ground-truth rendered images and composite rendered images by randomly selecting two different images and exchanging their foregrounds. Taking "human" category for an example, the illustration of composite rendered image generation process is shown below.
 <img src='examples/dataset_generation.jpg' align="center" width=1024>
