@@ -1,6 +1,14 @@
 # Rendered_Image_Harmonization_Dataset
 
-Welcome to the official homepage of the rendered image harmonization dataset. **RdHarmony** is a large-scale Rendered Image Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images with 11 novel categories, which is useful for supervised image harmonization methods.
+This is the official repository for the following paper:
+
+> **Deep Image Harmonization by Bridging the Reality Gap**  [[arXiv]](https://arxiv.org/pdf/2103.17104.pdf)<br>
+>
+> Junyan Cao, Wenyan Cong, Li Niu, Jianfu Zhang, Liqing Zhang <br>
+> Accepted by **BMVC 2022**.
+
+
+**RdHarmony** is a large-scale Rendered Image Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images with 11 novel categories, which is useful for supervised image harmonization methods. **Note that in our paper, RdHarmony contains rendered training pairs with 6 novel categories. We extend it to 5 more novel categories now.**
 
 <img src='examples/dataset_triplet.png' align="center" width=1024>
 
@@ -15,13 +23,7 @@ Welcome to the official homepage of the rendered image harmonization dataset. **
 - 50 viewpoints(2D scene) for each 3D scene
 - 10 representative capture conditions for each 2D scene
 
-## Research Paper
 
-[Deep Image Harmonization by Bridging the Reality Gap](https://arxiv.org/pdf/2103.17104.pdf)
-
-Junyan Cao, Wenyan Cong, Li Niu, Jianfu Zhang, Liqing Zhang
-
-Note that in our paper, RdHarmony contains rendered training pairs with 6 novel categories. We extend it to 5 more novel categories now.
 
 ## Downloads
 
@@ -106,6 +108,11 @@ python test_save.py --dataset_root <path_to_iHarmony4_dataset> --name <experimen
 ```
 
 The harmonized outputs would be saved in `./results/experiment_name/latest_test/images/`.
+
+## Other Resources
+
++ [Awesome-Image-Harmonization](https://github.com/bcmi/Awesome-Image-Harmonization)
++ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
 
 ## Acknowledgements
 
