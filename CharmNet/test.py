@@ -14,9 +14,7 @@ from util import html,util
 from skimage import data, img_as_float
 from skimage.measure import compare_mse as mse
 from skimage.measure import compare_psnr as psnr
-from skimage.measure import compare_ssim as ssim
 
-from util import pytorch_ssim
 import torchvision.transforms.functional as tf
 
 sub_datasets = ['HCOCO','HAdobe5k','HFlickr','Hday2night']
@@ -90,11 +88,9 @@ if __name__ == '__main__':
         fmse_score_op=mse(output*mask,real*mask)*256*256/fore_area
         mse_score_op = mse(output,real)
         psnr_score_op = psnr(real,output,data_range=output.max() - output.min())
-        ssim_pre = ssim(real,output,data_range=output.max() - output.min(),multichannel=True)
-        fpsnr_score_op=10 * np.log10((255 ** 2) / fmse_score_op)
-        ssim_score_op, fssim_score_op = pytorch_ssim.ssim(pred_tensor, real_tensor, window_size=11, mask=mask_tensor)
-        print('%s | mse %0.4f | psnr %0.4f | ssim %0.4f %0.4f | fmse %0.4f | fpsnr %0.4f | fssim %0.4f' % (image_name,mse_score_op,psnr_score_op,ssim_pre,ssim_score_op,fmse_score_op,fpsnr_score_op,fssim_score_op))
-        file_op.writelines('%s\t%f\t%f\t%f\t%f\t%f\t%f\n' % (image_name,mse_score_op,psnr_score_op,ssim_score_op,fmse_score_op,fpsnr_score_op,fssim_score_op))
+
+        print('%s | mse %0.4f | fmse %0.4f | psnr %0.4f' % (image_name,mse_score_op,fmse_score_op,psnr_score_op))
+        file_op.writelines('%s\t%f\t%f\t%f\n' % (image_name,mse_score_op,fmse_score_op,psnr_score_op))
 
     webpage.save()  # save the HTML
     file_op.close()
@@ -104,49 +100,31 @@ if __name__ == '__main__':
         name_mse=[line.rstrip() for line in f.readlines()]
     mse_all=[]
     psnr_all=[]
-    ssim_all=[]
     fmse_all=[]
-    fpsnr_all=[]
-    fssim_all=[]
     for pp in range(0,len(name_mse)):
         mse_all.append(name_mse[pp].split('\t')[1])
         psnr_all.append(name_mse[pp].split('\t')[2])
-        ssim_all.append(name_mse[pp].split('\t')[3])
-        fmse_all.append(name_mse[pp].split('\t')[4])
-        fpsnr_all.append(name_mse[pp].split('\t')[5])
-        fssim_all.append(name_mse[pp].split('\t')[6])
+        fmse_all.append(name_mse[pp].split('\t')[3])
     mse_all=np.array(mse_all).astype(np.float)
     psnr_all=np.array(psnr_all).astype(np.float)
-    ssim_all=np.array(ssim_all).astype(np.float)
     fmse_all=np.array(fmse_all).astype(np.float)
-    fpsnr_all=np.array(fpsnr_all).astype(np.float)
-    fssim_all=np.array(fssim_all).astype(np.float)
 
-    print('WHOLE: %0.4f/%0.4f/%0.4f/%0.4f/%0.4f/%0.4f' % (np.mean(mse_all),np.mean(psnr_all),np.mean(ssim_all),np.mean(fmse_all),np.mean(fpsnr_all),np.mean(fssim_all)))
-    file_res.writelines('WHOLE: %s/%s/%s/%s/%s/%s\n' %(str(np.mean(mse_all)),str(np.mean(psnr_all)),str(np.mean(ssim_all)),str(np.mean(fmse_all)),str(np.mean(fpsnr_all)),str(np.mean(fssim_all))))
+    print('WHOLE: %0.4f/%0.4f/%0.4f' % (np.mean(mse_all),np.mean(fmse_all),np.mean(psnr_all)))
+    file_res.writelines('WHOLE: %s/%s/%s\n' %(str(np.mean(mse_all)),str(np.mean(fmse_all)),str(np.mean(psnr_all))))
     for jj in range(0,len(sub_datasets)):
         dataset_ind = sub_datasets_ind[jj]
         mse_avg=[]
         psnr_avg=[]
-        ssim_avg=[]
         fmse_avg=[]
-        fpsnr_avg=[]
-        fssim_avg=[]
         for mm in range(0,len(name_mse)):
             name = name_mse[mm].split('\t')[0]
             if name[0]==dataset_ind:
                 mse_avg.append(name_mse[mm].split('\t')[1])
                 psnr_avg.append(name_mse[mm].split('\t')[2])
-                ssim_avg.append(name_mse[mm].split('\t')[3])
-                fmse_avg.append(name_mse[mm].split('\t')[4])
-                fpsnr_avg.append(name_mse[mm].split('\t')[5])
-                fssim_avg.append(name_mse[mm].split('\t')[6])
+                fmse_avg.append(name_mse[mm].split('\t')[3])
         mse_avg=np.array(mse_avg).astype(np.float)
         psnr_avg=np.array(psnr_avg).astype(np.float)
-        ssim_avg=np.array(ssim_avg).astype(np.float)
         fmse_avg=np.array(fmse_avg).astype(np.float)
-        fpsnr_avg=np.array(fpsnr_avg).astype(np.float)
-        fssim_avg=np.array(fssim_avg).astype(np.float)
-        print('%s: %0.4f/%0.4f/%0.4f/%0.4f/%0.4f/%0.4f' % (sub_datasets[jj],np.mean(mse_avg),np.mean(psnr_avg),np.mean(ssim_avg),np.mean(fmse_avg),np.mean(fpsnr_avg),np.mean(fssim_avg)))
-        file_res.writelines('%s: %s/%s/%s/%s/%s/%s\n' %(str(sub_datasets[jj]),str(np.mean(mse_avg)),str(np.mean(psnr_avg)),str(np.mean(ssim_avg)),str(np.mean(fmse_avg)),str(np.mean(fpsnr_avg)),str(np.mean(fssim_avg))))
+        print('%s: %0.4f/%0.4f/%0.4f' % (sub_datasets[jj],np.mean(mse_avg),np.mean(fmse_avg),np.mean(psnr_avg)))
+        file_res.writelines('%s: %s/%s/%s\n' %(str(sub_datasets[jj]),str(np.mean(mse_avg)),str(np.mean(fmse_avg)),str(np.mean(psnr_avg))))
 
