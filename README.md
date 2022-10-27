@@ -52,3 +52,55 @@ For other 10 novel categories ("bottle", "cake", "motorcycle", "cow", "couch", "
 
   For each 2D scene, there are 10 ground-truth rendered images with 10 different styles, where one 3D character is treated as the foreground and its foreground mask could be obtained effortlessly using Unity3D. We could generate pairs of ground-truth rendered images and composite rendered images by randomly selecting two different images and exchanging their foregrounds. Taking "human" category for an example, the illustration of composite rendered image generation process is shown below.
 <img src='examples/dataset_generation.jpg' align="center" width=1024>
+
+## Our CharmNet
+
+Here we provide PyTorch implementation of our CharmNet.
+
+### Prerequisites
+
+- Linux
+- Python 3
+- CPU or NVIDIA GPU + CUDA CuDNN
+
+### Getting Started
+
+- #### Installation
+
+- Clone this repo:
+
+```bash
+git clone https://github.com/bcmi/Rendered-Image-Harmonization-Dataset-RdHarmony.git
+cd CharmNet
+```
+
+- Download the [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4) and our RdHarmony datasets.
+- Install [PyTorch](http://pytorch.org) 1.4+ and other dependencies (e.g., torchvision, [visdom](https://github.com/facebookresearch/visdom) and [dominate](https://github.com/Knio/dominate)).
+
+- #### CharmNet train/test
+
+Please specify `dataset_root` and `name` in the corresponding place.
+
+- Train a model:
+
+```bash
+python train.py --dataset_root <path_to_datasets> --name <experiment_name> --model dastyle --is_train 1 --norm batch --preprocess resize_and_crop --batch_size 8 --lr_policy step --lr_decay_iters 4702400
+```
+
+ `lr_decay_iters` is equal to the number of training images in real domain.
+
+- Test the model:
+
+```bash
+python test.py --dataset_root <path_to_iHarmony4_dataset> --name <experiment_name> --model dastyle --dataset_mode real --is_train 0 --preprocess resize --norm batch --eval
+```
+
+When testing, it prints the results of evaluation metrics MSE, fMSE and PSNR.
+
+- Save the harmonized outputs:
+
+```bash
+python test_save.py --dataset_root <path_to_iHarmony4_dataset> --name <experiment_name> --model dastyle --dataset_mode real --is_train 0 --preprocess resize --norm batch --eval
+```
+
+The harmonized outputs would be saved in `./results/experiment_name/latest_test/images/`.
