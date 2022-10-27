@@ -75,7 +75,9 @@ cd CharmNet
 ```
 
 - Download the [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4) and our RdHarmony datasets.
-- Install [PyTorch](http://pytorch.org) 1.7+ and other dependencies (e.g., torchvision, [visdom](https://github.com/facebookresearch/visdom) and [dominate](https://github.com/Knio/dominate)).
+- Install [PyTorch](http://pytorch.org) 1.10 and other dependencies (e.g., torchvision, [visdom](https://github.com/facebookresearch/visdom) and [dominate](https://github.com/Knio/dominate)).
+
+For pip users, please type the command `pip install -r requirements.txt`
 
 - #### CharmNet train/test
 
