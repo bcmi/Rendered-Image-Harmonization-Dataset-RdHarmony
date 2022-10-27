@@ -106,3 +106,7 @@ python test_save.py --dataset_root <path_to_iHarmony4_dataset> --name <experimen
 ```
 
 The harmonized outputs would be saved in `./results/experiment_name/latest_test/images/`.
+
+## Acknowledgements
+
+Our code is developed based on [pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
