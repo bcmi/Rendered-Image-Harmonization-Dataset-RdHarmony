@@ -27,12 +27,12 @@ This is the official repository for the following paper:
 
 ## Downloads
 
-For "human" novel category:
+For "human" novel category: [[Dropbox]](https://www.dropbox.com/scl/fi/jy6tyhy0gq3z0qd7fmuae/RHHarmony.zip?rlkey=ipjv0pazh4qxhz4iwm19n3f0e&st=1bwr4bvy&dl=0)
 
 - 15000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1zOzLZe5BREXN26sn9NMmxg) (access code: m4de)
 - 65000 rendered image pairs used in our paper [[Baidu_Cloud\]](https://pan.baidu.com/s/1eS_XE_bTDRvdGCUg9o42RQ) (access code: vnnj)
 
-For other 10 novel categories ("bottle", "cake", "motorcycle", "cow", "couch", "apple", "car",  "chair", "dog" and "knife"):
+For other 10 novel categories ("bottle", "cake", "motorcycle", "cow", "couch", "apple", "car",  "chair", "dog" and "knife"): [[Dropbox]](https://www.dropbox.com/scl/fi/c3h4ztunw2xxrwyg2z683/R10Harmony.zip?rlkey=e70uy4xlsmaookc7x53kmxtmk&st=etpn1frl&dl=0)
 
 - 10000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1ZPHIVXGS7z4Xv5TuVyzumw) (access code: z7mb)
 - 90000 rendered image pairs [[Baidu_Cloud\]](https://pan.baidu.com/s/13tsKitKzblp40BLYsKMhwg) (access code: u65p)
