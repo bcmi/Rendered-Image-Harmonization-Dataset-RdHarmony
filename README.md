@@ -8,41 +8,38 @@ This is the official repository for the following paper:
 > Accepted by **BMVC 2022**.
 
 
-**RdHarmony** is a large-scale Rendered Image Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images with 11 novel categories, which is useful for supervised image harmonization methods. **Note that in our paper, RdHarmony contains rendered training pairs with 6 novel categories. We extend it to 5 more novel categories now.**
+**RdHarmony** is a large-scale Rendered Image Harmonization dataset containing pairs of ground-truth rendered images and composite rendered images with 11 categories, which is useful for supervised image harmonization methods.
 
 <img src='examples/dataset_triplet.png' align="center" width=1024>
 
 ## Highlights
 
-- 11 categories, containing "human", "bottle", "cake", "motorcycle", "cow", "couch", "apple", "car",  "chair", "dog" and "knife"
+- 11 categories: "human", "bottle", "cake", "motorcycle", "cow", "couch", "apple", "car",  "chair", "dog" and "knife"
 - 15000 ground-truth rendered images for "human" category and 1000 ground-truth rendered images for each other, with image resolution of 1920*1080
-- maximally 225000 pairs of ground-truth rendered images and composite rendered images
-- accurate foreground masks
-- automatic rendered image generation and composite image generation
 - 30 indoor/outdoor 3D scenes
-- 50 viewpoints(2D scene) for each 3D scene
-- 10 representative capture conditions for each 2D scene
-
+- 50 viewpoints (2D scene) for each 3D scene
+- 10 illumination conditions for each 2D scene: 1. sunrise&sunset, clear; 2. sunrise&sunset, partly cloudy; 3. sunrise&sunset, cloudy; 4. noon, clear; 5. noon, partly cloudy; 6. noon, cloudy; 7. other times, clear; 8. other times, partly cloudy; 9. other times, cloudy; 10. night
 
 
 ## Downloads
 
-For "human" novel category: [[Dropbox]](https://www.dropbox.com/scl/fi/jy6tyhy0gq3z0qd7fmuae/RHHarmony.zip?rlkey=ipjv0pazh4qxhz4iwm19n3f0e&st=1bwr4bvy&dl=0)
+For "human" category: 
 
-- 15000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1zOzLZe5BREXN26sn9NMmxg) (access code: m4de)
-- 65000 rendered image pairs used in our paper [[Baidu_Cloud\]](https://pan.baidu.com/s/1eS_XE_bTDRvdGCUg9o42RQ) (access code: vnnj)
+- 15000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1zOzLZe5BREXN26sn9NMmxg) (access code: m4de) [[Dropbox]](https://www.dropbox.com/scl/fi/jy6tyhy0gq3z0qd7fmuae/RHHarmony.zip?rlkey=ipjv0pazh4qxhz4iwm19n3f0e&st=1bwr4bvy&dl=0)
+- 65000 rendered image pairs used in our paper [[Baidu_Cloud\]](https://pan.baidu.com/s/1eS_XE_bTDRvdGCUg9o42RQ) (access code: vnnj) [[Dropbox]](https://www.dropbox.com/scl/fi/jy6tyhy0gq3z0qd7fmuae/RHHarmony.zip?rlkey=ipjv0pazh4qxhz4iwm19n3f0e&st=1bwr4bvy&dl=0)
 
-For other 10 novel categories ("bottle", "cake", "motorcycle", "cow", "couch", "apple", "car",  "chair", "dog" and "knife"): [[Dropbox]](https://www.dropbox.com/scl/fi/c3h4ztunw2xxrwyg2z683/R10Harmony.zip?rlkey=e70uy4xlsmaookc7x53kmxtmk&st=etpn1frl&dl=0)
 
-- 10000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1ZPHIVXGS7z4Xv5TuVyzumw) (access code: z7mb)
-- 90000 rendered image pairs [[Baidu_Cloud\]](https://pan.baidu.com/s/13tsKitKzblp40BLYsKMhwg) (access code: u65p)
+For other 10 categories ("bottle", "cake", "motorcycle", "cow", "couch", "apple", "car",  "chair", "dog" and "knife"): [[Dropbox]](https://www.dropbox.com/scl/fi/c3h4ztunw2xxrwyg2z683/R10Harmony.zip?rlkey=e70uy4xlsmaookc7x53kmxtmk&st=etpn1frl&dl=0)
+
+- 10000 ground-truth rendered images [[Baidu_Cloud\]](https://pan.baidu.com/s/1ZPHIVXGS7z4Xv5TuVyzumw) (access code: z7mb) [[Dropbox]](https://www.dropbox.com/scl/fi/jy6tyhy0gq3z0qd7fmuae/RHHarmony.zip?rlkey=ipjv0pazh4qxhz4iwm19n3f0e&st=1bwr4bvy&dl=0)
+- 90000 rendered image pairs [[Baidu_Cloud\]](https://pan.baidu.com/s/13tsKitKzblp40BLYsKMhwg) (access code: u65p) [[Dropbox]](https://www.dropbox.com/scl/fi/jy6tyhy0gq3z0qd7fmuae/RHHarmony.zip?rlkey=ipjv0pazh4qxhz4iwm19n3f0e&st=1bwr4bvy&dl=0)
 
 
 ## Details
 
 - ### **Ground-truth Rendered Image Generation**
 
-  We collect 30 3D scenes from Unity Asset Store and CG websites, including outdoor scenes (e.g., raceway, downtown, street, forest) and indoor scenes (e.g., bar, stadium, gym). For each 2D scene shot in 3D scenes, we sample 10 ground-truth rendered images with 10 different capture conditions (i.e., styles), including the the night style as well as styles of Clear/PartlyCloudy/Cloudy weather at sunrise&sunset/noon/other-times. Example scenes of 11 novel categories with all 10 ground-truth rendered images are shown below. Under each time of the day except “Night”, from top to bottom, we show rendered images captured under Clear, Partly Cloudy, and Cloudy weather.
+  We collect 30 3D scenes from Unity Asset Store and CG websites, including outdoor scenes (e.g., raceway, downtown, street, forest) and indoor scenes (e.g., bar, stadium, gym). For each 2D scene shot in 3D scenes, we sample 10 ground-truth rendered images with 10 different capture conditions (i.e., styles), including the the night style as well as styles of Clear/PartlyCloudy/Cloudy weather at sunrise&sunset/noon/other-times. Example scenes of 11 categories with all 10 ground-truth rendered images are shown below. Under each time of the day except “Night”, from top to bottom, we show rendered images captured under Clear, Partly Cloudy, and Cloudy weather.
 
 <img src='examples/groundtruth_example.jpg' align="center" width=1024>
 
